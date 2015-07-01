@@ -1,0 +1,35 @@
+<template name="mainLayout">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        {{#linkTo route='root' class='navbar-brand'}}
+          Tutorial blog
+        {{/linkTo}}
+      </div>
+      <ul class="nav navbar-nav">
+        <li>
+          {{#linkTo route='root'}}
+            Home
+          {{/linkTo}}
+        </li>
+        <li>
+          {{#linkTo route='newPost'}}
+            Add new post
+          {{/linkTo}}
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       {{> loginButtons}}
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8">
+        {{> yield}}
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+</template>
